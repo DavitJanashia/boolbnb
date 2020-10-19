@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Payment;
+use App\Apartment;
+use App\Sponsorship;
 
 class PaymentSeeder extends Seeder
 {
@@ -11,6 +14,14 @@ class PaymentSeeder extends Seeder
      */
     public function run()
     {
-        //
+      factory(Payment::class, 100)
+    -> make()
+    -> each(function($pay){
+      $apart = Apartment::inRandomOrder() -> first();
+      $spons = Sponsorship::inRandomOrder() -> first();
+      $pay -> apartment() -> associate($apart);
+      $pay -> sponsorship() -> associate($spons);
+      $pay -> save();
+    });
     }
 }

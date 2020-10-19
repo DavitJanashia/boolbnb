@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Statistic;
+use App\Apartment;
+use App\Message;
 
 class StatisticSeeder extends Seeder
 {
@@ -11,6 +14,19 @@ class StatisticSeeder extends Seeder
      */
     public function run()
     {
+
+        factory(Statistic::class,200) -> create();
+        // ->make()
+        // ->each(function($stat){
         //
+        //   $idAp = Apartment::inRandomOrder()->first();
+        //   $stat -> apartment() -> associate($idAp);
+        //
+        //   var_dump($idAp);
+        //   $msgs = DB::table('messages')->where('apartment_id',$idAp)->count();
+        // });
+
+
+
     }
 }

@@ -29,13 +29,13 @@ class ServiceSeeder extends Seeder
         ]);
       }
 
-      Service::each(function($serv){
-        $apart = Apartment::inRandomOrder()
-                -> take(rand(1,2))
-                -> get();
-        $serv -> apartments() -> attach($apart);
-
-      });
+      // Service::each(function($serv){
+      //   $apart = Apartment::inRandomOrder()
+      //           -> take(rand(1,2))
+      //           -> get();
+      //   $serv -> apartments() -> attach($apart);
+      //
+      // });
 
     }
 }

@@ -15,10 +15,10 @@ class CreateSponsorshipsTable extends Migration
     {
         Schema::create('sponsorships', function (Blueprint $table) {
             $table->id();
-            
+
             $table->string('type_of_sponsorship',60);
             $table->decimal('price',3,2);
-            $table->date('deadline');
+            $table->string('deadline');
 
         });
     }

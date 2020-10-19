@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Apartment;
 use App\User;
+use App\Service;
 
 class ApartmentSeeder extends Seeder
 {
@@ -20,5 +21,14 @@ class ApartmentSeeder extends Seeder
         $apart -> user() -> associate($user);
         $apart -> save();
       });
+
+      Apartment::each(function($apar){
+        $ser = Service::inRandomOrder()
+                -> take(rand(0,6))
+                -> get();
+        $apar -> services() -> attach($ser);
+
+      });
+
     }
 }
