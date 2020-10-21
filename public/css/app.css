@@ -10912,13 +10912,17 @@ a.text-dark:focus {
 
 /* HEADER */
 
-header {
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+body {
+  width: 100%;
+  min-height: 100vh;
   background-image: url(/images/jumbo.jpg?3760848bab31a6e935c55ed38dd9c9ec);
   background-size: cover;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-top: 15px;
 }
 
 .flex {
@@ -10927,8 +10931,7 @@ header {
 }
 
 #logo {
-  width: 140px;
-  height: 50px;
+  height: 100%;
 }
 
 .inline-block {
@@ -10964,7 +10967,7 @@ header {
 
 .white-radius {
   text-align: center;
-  width: 80px;
+  width: 60px;
   height: 40px;
   background-color: white;
   border-radius: 30px;
@@ -10972,18 +10975,14 @@ header {
 
 .white-radius-center {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  width: 50vw;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center !important;
+  width: 40%;
   height: 60px;
   background-color: white;
   border-radius: 30px;
-}
-
-.white-radius-center div,
-span,
-p {
-  margin: 10px;
+  padding: 5px 5px 5px 15px;
 }
 
 .white-radius-center p {
@@ -11006,7 +11005,8 @@ a {
   height: 50px;
   width: 50px;
   background-color: #FF385C;
-  transform: translate(0, -5px);
+  margin: 0;
+  padding: 0;
 }
 
 .fa-search {
@@ -11021,21 +11021,174 @@ a {
 
 #log-reg {
   flex-direction: row;
+  align-items: center;
 }
 
-#regist {
+#log-reg > li {
+  margin-left: 10px;
+  width: 70px;
+  color: grey;
+  background-color: white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  font-family: arial;
+}
+
+#regist-1,
+#regist-2 {
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+#regist-1 span {
+  color: white;
+}
+
+#regist-2 span {
+  color: grey;
 }
 
 .dropdown-toggle::after {
   display: none;
 }
 
-#my-profile {
+#my-profile > a {
   display: flex;
-  flex: row;
+  justify-content: space-between;
+}
+
+#my-profile > a img {
+  margin: 0;
+  padding: 0;
+}
+
+#my-profile > a i {
+  display: flex;
   align-items: center;
+  padding-left: 10px;
+}
+
+#mynavbar {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  height: 80px;
+}
+
+#mysearch {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 60%;
+}
+
+#div-logo {
+  height: 100%;
+}
+
+#text-logo {
+  margin: 0;
+  padding: 0;
+  padding-left: 8px;
+  font-size: 30px;
+  font-family: arial;
+}
+
+#text-pinklogo {
+  color: #fc3c60;
+  margin: 0;
+  padding: 0;
+  padding-left: 8px;
+  font-size: 30px;
+  font-family: arial;
+}
+
+#a-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#navbarDropdown {
+  color: grey;
+}
+
+.dropdown-menu.dropdown-menu-right {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  border: none;
+}
+
+#div-search {
+  margin-top: 40px;
+}
+
+#bg-white {
+  background: white;
+  box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+#bg-transparent {
+  background: transparent;
+}
+
+#my-box {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 9px;
+}
+
+.form-control-file {
+  display: inline-block;
+}
+
+#serv-agiunt {
+  padding-top: 20px;
+  display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#my-serv-ag {
+  margin-top: 30px;
+}
+
+#mycreate-btn,
+#myupdate-btn {
+  display: block;
+  margin: auto;
+}
+
+#img-inp {
+  display: inline-block;
+}
+
+#my-img-inp {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#my-img-inp > img {
+  width: 60%;
+  overflow: hidden;
+}
+
+#form-img-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#img-show {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#img-show img {
+  width: 100%;
+}
+
+#card-body-show ul {
+  list-style: none;
 }
 

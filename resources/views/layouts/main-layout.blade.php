@@ -25,8 +25,10 @@
 
         <div class="flex-center position-ref full-height">
 
-          @include('partials.header')
-          @include('partials.footer')
+          @yield('header')
+          @yield('content')
+
+
 
         </div>
     </body>

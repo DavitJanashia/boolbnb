@@ -26,3 +26,5 @@ Route::post('/update/{id}', 'UserController@update')-> name('apart.update');
 Route::get('/create', 'UserController@create') -> name('apart.create');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/store', 'UserController@store')-> name('apart.store');
+Route::get('/delete/{id}', 'UserController@delete')-> name('apart.delete');
+Route::get('/apart/{id}', 'UserController@show')-> name('apart.show');

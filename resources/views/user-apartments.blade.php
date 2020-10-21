@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.main-layout')
+
+@section('header')
+  @include('partials.header2')
+@endsection
 
 @section('content')
 <div class="container">
@@ -13,8 +17,9 @@
           <ul>
             @foreach ($aparts as $apart)
               <li> {{ $apart -> description }}</li>
-              <a href="#">Show</a>
+              <a href="{{route('apart.show',$apart -> id)}}">Show</a>
               <a href="{{route('apart.edit',$apart -> id)}}">Edit</a>
+              <a href="{{route('apart.delete', $apart -> id)}}">Delete</a>
             @endforeach
           </ul>
 
@@ -23,7 +28,5 @@
     </div>
   </div>
 </div>
-
-
 
 @endsection
