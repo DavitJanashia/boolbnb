@@ -65,7 +65,7 @@ class UserController extends Controller
 
 
 
-      return redirect()-> route('home');
+      return redirect()-> route('user.index');
     }
 
     public function usindex() {
@@ -92,32 +92,32 @@ class UserController extends Controller
 
       $wifi = $request -> input('wifi');
       if ($wifi) {
-      $apart -> services() -> attach(1);
+      $apart -> services() -> sync(1,false);
       }
 
       $parking = $request -> input('parking');
       if ($parking) {
-      $apart -> services() -> attach(2);
+      $apart -> services() -> sync(2,false);
       }
 
       $sauna = $request -> input('sauna');
       if ($sauna) {
-      $apart -> services() -> attach(3);
+      $apart -> services() -> sync(3,false);
       }
 
       $sea_view = $request -> input('sea_view');
       if ($sea_view) {
-      $apart -> services() -> attach(4);
+      $apart -> services() -> sync(4,false);
       }
 
       $pool = $request -> input('pool');
       if ($pool) {
-      $apart -> services() -> attach(5);
+      $apart -> services() -> sync(5,false);
       }
 
       $reception = $request -> input('reception');
       if ($reception) {
-      $apart -> services() -> attach(6);
+      $apart -> services() -> sync(6,false);
       }
 
       return redirect() -> route('user.index');

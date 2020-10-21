@@ -9,6 +9,7 @@
           <h1>I miei annunci</h1>
         </div>
         <div class="card-body">
+          <a href="{{ route('apart.create') }}">Crea annuncio</a>
           <ul>
             @foreach ($aparts as $apart)
               <li> {{ $apart -> description }}</li>
@@ -16,6 +17,7 @@
               <a href="{{route('apart.edit',$apart -> id)}}">Edit</a>
             @endforeach
           </ul>
+
         </div>
       </div>
     </div>
