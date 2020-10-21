@@ -6,11 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    public $timestamps = false;
+  public $timestamps = false;
 
-    protected $fillable = ['service'];
+  protected $fillable = [
 
-    public function apartments() {
+    'service'
+    
+  ];
+
+  public function apartments() {
     return $this -> belongsToMany(Apartment::class);
-    }
+  }
 }

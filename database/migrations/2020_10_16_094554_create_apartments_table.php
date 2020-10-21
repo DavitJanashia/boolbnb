@@ -16,7 +16,7 @@ class CreateApartmentsTable extends Migration
         Schema::create('apartments', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('description',150);
             $table->integer('number_of_rooms');
             $table->integer('number_of_beds');
@@ -25,8 +25,8 @@ class CreateApartmentsTable extends Migration
             $table->string('address',80);
             $table->string('city',60);
             $table->string('state',60);
-            $table->string('lat');
-            $table->string('lng');
+            $table->string('lat')->default('nfdaslkdjas');
+            $table->string('lng')->default('nfdaslkdjas');
             $table->string('image',100);
             $table->timestamp('date_of_creation');
             $table->boolean('sponsorship')->default(false);

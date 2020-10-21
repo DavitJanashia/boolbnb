@@ -19,4 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/list', 'UserController@usindex')-> name('user.index');
+Route::get('/edit/{id}', 'UserController@edit')-> name('apart.edit');
+Route::post('/update/{id}', 'UserController@update')-> name('apart.update');
+
+Route::get('/create', 'UserController@create') -> name('apart.create');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/store', 'UserController@store')-> name('apart.store');

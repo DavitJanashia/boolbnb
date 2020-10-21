@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Statistic extends Model
 {
   protected $fillable = [
+    
     'apartment_id',
     'current_date',
     'number_of_click'

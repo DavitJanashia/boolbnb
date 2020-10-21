@@ -8,7 +8,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Message::class, function (Faker $faker) {
     return [
-      'email'  => $faker -> email(),
-      'message'  => $faker -> paragraph($nbSentences = 3, $variableNbSentences = true)
+
+      'email'      => $faker -> email(),
+      'message'    => $faker -> paragraph($nbSentences = 3, $variableNbSentences = true)
+      
     ];
 });
