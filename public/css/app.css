@@ -10922,7 +10922,6 @@ body {
 header {
   width: 100%;
   margin-bottom: 50px;
-  padding-top: 15px;
 }
 
 .flex {
@@ -11121,7 +11120,7 @@ a {
 }
 
 #div-search {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 #bg-white {

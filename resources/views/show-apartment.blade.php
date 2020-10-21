@@ -7,7 +7,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <a  href="{{route('user.index')}}">Elenco appartamenti</a>
+      {{-- <a  href="{{route('user.index')}}">Elenco appartamenti</a> --}}
       <div class="card">
         <div class="card-header">
           <h1>{{$apart -> description}}</h1>
@@ -54,8 +54,8 @@
           </ul>
         </div>
       </div>
-      <a href="#">Statistiche</a>
-      <a href="#">Sponsorizza l'appartamento</a>
+      {{-- <a href="#">Statistiche</a>
+      <a href="#">Sponsorizza l'appartamento</a> --}}
 
     </div>
   </div>

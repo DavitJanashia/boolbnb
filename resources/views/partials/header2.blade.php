@@ -4,7 +4,7 @@
         <!-- airbnblogo -->
         <div id="div-logo" class="">
           <a id="a-logo" href="{{ url('/')}}">
-            <img id="logo" src="./img/pinklogo.png" alt="">
+            <img id="logo" src="/img/pinklogo.png" alt="">
             <span id="text-pinklogo">boolbnb</span>
           </a>
         </div>
@@ -33,7 +33,7 @@
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{-- {{ Auth::user()-> firstname }} --}}
                 <i class="fas fa-bars"></i>
-                <img id="user" src="./img/user.png" alt="">
+                <img id="user" src="/img/user.png" alt="">
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
