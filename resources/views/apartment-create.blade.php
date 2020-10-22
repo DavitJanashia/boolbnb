@@ -27,7 +27,7 @@
 
                 <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="description">Descrizione appartamento</label>
-              <input id="description" type="text" class=" @error('description') is-invalid @enderror col-md-6" name="description" value="" required autocomplete="description" autofocus >
+              <input id="description" type="text" class=" @error('description') is-invalid @enderror col-md-6" name="description" value="{{ old('description') }}"  required autocomplete="description" autofocus >
                 @error('description')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="number_of_rooms">Numero di stanze</label>
-              <input id="number_of_rooms" type="number" class=" @error('number_of_rooms') is-invalid @enderror col-md-6" name="number_of_rooms" value="" required autocomplete="number_of_rooms" autofocus>
+              <input id="number_of_rooms" type="number" class=" @error('number_of_rooms') is-invalid @enderror col-md-6" name="number_of_rooms"  value="{{ old('number_of_rooms') }}" required autocomplete="number_of_rooms" autofocus>
               @error('number_of_rooms')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="number_of_beds">Numero di letti</label>
-              <input id="number_of_beds" type="number" class=" @error('number_of_beds') is-invalid @enderror col-md-6" name="number_of_beds" value="" required autocomplete="number_of_beds" autofocus>
+              <input id="number_of_beds" type="number" class=" @error('number_of_beds') is-invalid @enderror col-md-6" name="number_of_beds" value="{{ old('number_of_beds') }}"  required autocomplete="number_of_beds" autofocus>
               @error('number_of_beds')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -54,7 +54,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="number_of_bathrooms">Numero di bagni</label>
-              <input id="number_of_bathrooms" type="number" class=" @error('number_of_bathrooms') is-invalid @enderror col-md-6" name="number_of_bathrooms" value="" required autocomplete="number_of_bathrooms" autofocus>
+              <input id="number_of_bathrooms" type="number" class=" @error('number_of_bathrooms') is-invalid @enderror col-md-6" name="number_of_bathrooms" value="{{ old('number_of_bathrooms') }}"  required autocomplete="number_of_bathrooms" autofocus>
               @error('number_of_bathrooms')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="square_meters">Metri quadri</label>
-              <input id="square_meters" type="number" class=" @error('square_meters') is-invalid @enderror col-md-6" name="square_meters" value="" required autocomplete="square_meters" autofocus>
+              <input id="square_meters" type="number" class=" @error('square_meters') is-invalid @enderror col-md-6" name="square_meters" value="{{ old('square_meters') }}"  required autocomplete="square_meters" autofocus>
               @error('square_meters')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="address">Via</label>
-              <input id="address" type="text" class=" @error('address') is-invalid @enderror col-md-6" name="address" value="" required autocomplete="address" autofocus>
+              <input id="address" type="text" class=" @error('address') is-invalid @enderror col-md-6" name="address" value="{{ old('address') }}"  required autocomplete="address" autofocus>
               @error('address')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -81,7 +81,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="city">Città</label>
-              <input id="city" type="text" class=" @error('city') is-invalid @enderror col-md-6" name="city" value="" required autocomplete="city" autofocus>
+              <input id="city" type="text" class=" @error('city') is-invalid @enderror col-md-6" name="city"  value="{{ old('city') }}" required autocomplete="city" autofocus>
               @error('city')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -90,7 +90,7 @@
             </div>
             <div class="form-group">
               <label class="col-md-4 col-form-label text-md-right" for="state">Paese</label>
-              <input id="state" type="text" class=" @error('state') is-invalid @enderror col-md-6" name="state" value="" required autocomplete="state" autofocus>
+              <input id="state" type="text" class=" @error('state') is-invalid @enderror col-md-6" name="state" value="{{ old('state') }}" required autocomplete="state" autofocus>
               @error('state')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>

@@ -29,15 +29,15 @@ class UserController extends Controller
     public function store(Request $request) {
 
       $validator = Validator::make($request->all(), [
-        'description' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:150'],
-        'number_of_rooms' => ['required', 'integer', 'min:1'],
-        'number_of_beds' => ['required', 'integer', 'min:1'],
-        'number_of_bathrooms' => ['required', 'integer', 'min:1'],
-        'square_meters' => ['required', 'integer', 'min:30'],
-        'address' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:80'],
-        'city' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:60'],
-        'state' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:60'],
-        'image' =>  ['required','image','mimes:jpeg,png,jpg,gif','max:2048']
+        'description'          => ['required','string','regex:/(^[A-Za-z0-9 ]+$)+/','min:3','max:150'],
+        'number_of_rooms'      => ['required', 'integer', 'min:1'],
+        'number_of_beds'       => ['required', 'integer', 'min:1'],
+        'number_of_bathrooms'  => ['required', 'integer', 'min:1'],
+        'square_meters'        => ['required', 'integer', 'min:25'],
+        'address'              => ['required','string','regex:/(^[A-Za-z0-9 ]+$)+/','min:3','max:80'],
+        'city'                 => ['required','string','regex:/(^[A-Za-z]+$)+/','min:3','max:60'],
+        'state'                => ['required','string','regex:/(^[A-Za-z]+$)+/','min:3','max:60'],
+        'image'                => ['required','image','mimes:jpeg,png,jpg,gif','max:2048']
        ]);
 
         if ($validator->fails()) {
@@ -120,15 +120,15 @@ class UserController extends Controller
     public function update(Request $request, $id) {
 
       $validator = Validator::make($request->all(), [
-        'description' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:150'],
-        'number_of_rooms' => ['required', 'integer', 'min:1'],
-        'number_of_beds' => ['required', 'integer', 'min:1'],
-        'number_of_bathrooms' => ['required', 'integer', 'min:1'],
-        'square_meters' => ['required', 'integer', 'min:30'],
-        'address' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:80'],
-        'city' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:60'],
-        'state' => ['required','string','regex:/^[a-zA-Z]+$/u','min:3','max:60'],
-        'image' =>  ['image','mimes:jpeg,png,jpg,gif','max:2048']
+        'description'          => ['required','string','regex:/(^[A-Za-z0-9 ]+$)+/','min:3','max:150'],
+        'number_of_rooms'      => ['required', 'integer', 'min:1'],
+        'number_of_beds'       => ['required', 'integer', 'min:1'],
+        'number_of_bathrooms'  => ['required', 'integer', 'min:1'],
+        'square_meters'        => ['required', 'integer', 'min:25'],
+        'address'              => ['required','string','regex:/(^[A-Za-z0-9 ]+$)+/','min:3','max:80'],
+        'city'                 => ['required','string','regex:/(^[A-Za-z]+$)+/','min:3','max:60'],
+        'state'                => ['required','string','regex:/(^[A-Za-z]+$)+/','min:3','max:60'],
+        'image'                => ['image','mimes:jpeg,png,jpg,gif','max:2048']
        ]);
 
         if ($validator->fails()) {
@@ -211,7 +211,7 @@ class UserController extends Controller
 
       $apart = Apartment::findOrFail($id);
       $services = $apart->services()->get();
-      
+
       return view('show-apartment', compact('apart','services'));
     }
 }

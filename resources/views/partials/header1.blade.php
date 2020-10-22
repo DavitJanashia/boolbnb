@@ -24,7 +24,7 @@
           @else
             {{-- @auth --}}
             <a id="regist-1"  href="{{route('apart.create')}}" >
-              <span>Diventa un host</span>
+              <span>Aggiungi un annuncio</span>
             </a>
             {{-- @endauth --}}
             <li id="my-profile" class="nav-item dropdown inline-block white-radius">

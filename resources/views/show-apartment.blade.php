@@ -12,8 +12,8 @@
         <div class="card-header">
           <h1>{{$apart -> description}}</h1>
           <div class="">
-            <a href="{{route('apart.edit',$apart -> id)}}">Edit</a>
-            <a href="{{route('apart.delete', $apart -> id)}}">Delete</a>
+            <a class="btn btn-light" href="{{route('apart.edit',$apart -> id)}}">Edit</a>
+            <a class="btn btn-light" href="{{route('apart.delete', $apart -> id)}}">Delete</a>
           </div>
         </div>
         <div id="card-body-show" class="card-body">

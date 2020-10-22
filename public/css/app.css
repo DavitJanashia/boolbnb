@@ -11191,3 +11191,19 @@ a {
   list-style: none;
 }
 
+.image,
+.image-edit {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image > img,
+.image-edit > img {
+  width: 120%;
+  position: relative;
+  right: 17px;
+  transform: translate(0%, 0%);
+}
+
