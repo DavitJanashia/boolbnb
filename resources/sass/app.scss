@@ -272,3 +272,11 @@ a{
     transform: translate(0%,0%);
   }
 }
+#lat-form, #lng-form,#mylatitude,#mylongitude {
+  position:absolute;
+  visibility: hidden;
+  z-index: -99;
+}
+.formSearch {
+  width:100%;
+}
