@@ -15,6 +15,12 @@
     <span id="mylatitude">{{$lat}}</span>
     <span id="mylongitude">{{$lng}}</span>
   </div>
+  <div id="slidecontainer">
+      <p>Scegli il raggio in km:</p>
+      <input id="mySliderRadius" type="range" min="1" max="100000" value="20000">
+
+      <p>km: <span id="sliderValue"></span></p>
+    </div>
   <div class="row justify-content-center">
 
     <div class="col-md-8">
